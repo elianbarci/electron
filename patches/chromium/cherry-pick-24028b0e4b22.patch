@@ -23,7 +23,7 @@ Reviewed-by: Michael Wilson <mjwilson@chromium.org>
 Cr-Commit-Position: refs/heads/main@{#1735828}
 
 diff --git a/third_party/blink/renderer/modules/webaudio/audio_param_handler.cc b/third_party/blink/renderer/modules/webaudio/audio_param_handler.cc
-index 073f145b1c812f286ba0c7899a4644b7f9db4b26..0e5188ed438bb12731b8b40f9b06523f1267cb4c 100644
+index d104f0b8f17b5e758b205e31a2bef9afc016b19b..076e506c80058d89ef56c4529bc4a5ccc302e88c 100644
 --- a/third_party/blink/renderer/modules/webaudio/audio_param_handler.cc
 +++ b/third_party/blink/renderer/modules/webaudio/audio_param_handler.cc
 @@ -972,7 +972,8 @@ bool AudioParamHandler::InsertEvent(std::unique_ptr<ParamEvent> event,
@@ -47,10 +47,10 @@ index 073f145b1c812f286ba0c7899a4644b7f9db4b26..0e5188ed438bb12731b8b40f9b06523f
                DOMExceptionCode::kNotSupportedError,
                StrCat({EventToString(*event), " overlaps ",
 diff --git a/third_party/blink/renderer/modules/webaudio/audio_param_handler_test.cc b/third_party/blink/renderer/modules/webaudio/audio_param_handler_test.cc
-index 9a7f471f7bd5be3ebe9509fdf853dab12448de25..2e9874d60c84da4fd074d7d0449f9913c722d981 100644
+index 92f7a26f0419cb9895910d73fbdb4d5213cdead6..8b57b139771bc065943565ef1c1e0b3906dea5ef 100644
 --- a/third_party/blink/renderer/modules/webaudio/audio_param_handler_test.cc
 +++ b/third_party/blink/renderer/modules/webaudio/audio_param_handler_test.cc
-@@ -123,4 +123,26 @@ TEST(AudioParamHandlerTest, TimelinePruningOnDisconnectedNode) {
+@@ -186,4 +186,26 @@ TEST(AudioParamHandlerTest, SetValueCurveWithPastStartTime) {
    }
  }
  
